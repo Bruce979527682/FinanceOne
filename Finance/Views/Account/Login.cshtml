@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style type="text/css">
+
+    body {
+        background-color: #DADADA;
+    }
+
+        body > .grid {
+            height: 100%;
+        }
+
+    .image {
+        margin-top: -100px;
+    }
+
+    .column {
+        max-width: 450px;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $('.ui.form').form({
+            fields: {
+                email: {
+                    identifier: 'email',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: '请输入你的账号'
+                        }
+                    ]
+                },
+                password: {
+                    identifier: 'password',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: '请输入你的密码'
+                        },
+                        {
+                            type: 'length[6]',
+                            prompt: '密码长度不小于6位'
+                        }
+                    ]
+                }
+            }
+        })
+            ;
+    });
+</script>
+<div class="ui middle aligned center aligned grid" style="height:100%;">
+    <div class="column">
+        <h2 class="ui teal image header">
+            @*<img src="assets/images/logo.png" class="image">*@
+            <div class="content">
+                账号登录
+            </div>
+        </h2>
+        <form class="ui large form">
+            <div class="ui stacked segment">
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input type="text" name="email" placeholder="请输入账号">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <input type="password" name="password" placeholder="请输入密码">
+                    </div>
+                </div>
+                <div class="ui fluid large teal submit button">登录</div>
+            </div>
+            <div class="ui error message"></div>
+        </form>
+        <div class="ui message">
+            没有账号？ <a href="#">注册</a>
+        </div>
+    </div>
+</div>

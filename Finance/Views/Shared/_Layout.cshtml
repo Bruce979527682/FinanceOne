@@ -3,69 +3,75 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Finance</title>
+    <title>财务系统</title>
 
     <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
-</head>
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Finance</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <partial name="_CookieConsentPartial" />
-
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2018 - Finance</p>
-        </footer>
-    </div>
-
-    <environment include="Development">
+        <link rel="stylesheet" href="~/semantic/dist/semantic.css" />
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/reset.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/site.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/container.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/grid.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/header.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/image.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/menu.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/divider.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/segment.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/form.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/input.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/button.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/list.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/message.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/icon.css">
         <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/semantic/dist/components/form.js"></script>
+        <script src="~/semantic/dist/components/transition.js"></script>
     </environment>
     <environment exclude="Development">
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/reset.min.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/site.min.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/container.min.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/grid.min.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/header.min.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/image.min.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/menu.min.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/divider.min.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/segment.min.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/form.min.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/input.min.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/button.min.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/list.min.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/message.min.css">
+        <link rel="stylesheet" type="text/css" href="~/semantic/dist/components/icon.min.css">
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
                 asp-fallback-test="window.jQuery"
                 crossorigin="anonymous"
                 integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
         </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-        </script>
+        <script src="~/semantic/dist/components/form.js"></script>
+        <script src="~/semantic/dist/components/transition.js"></script>
+    </environment>
+
+</head>
+<body>
+        @RenderBody()
+
+    <environment include="Development">
+        @*<script src="~/lib/jquery/dist/jquery.js"></script>*@
+        <script src="~/semantic/dist/semantic.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        @*<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery"
+                    crossorigin="anonymous"
+                    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+            </script>*@
+        <script src="~/semantic/dist/semantic.min.js"></script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 

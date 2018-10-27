@@ -5,7 +5,78 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\**" />
+    <Content Remove="Data\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <None Remove="Data\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.109.2" />
+    <PackageReference Include="vue" Version="2.5.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Bll\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\semantic\dist\components\accordion.js" />
+    <None Include="wwwroot\semantic\dist\components\accordion.min.js" />
+    <None Include="wwwroot\semantic\dist\components\api.js" />
+    <None Include="wwwroot\semantic\dist\components\api.min.js" />
+    <None Include="wwwroot\semantic\dist\components\checkbox.js" />
+    <None Include="wwwroot\semantic\dist\components\checkbox.min.js" />
+    <None Include="wwwroot\semantic\dist\components\dimmer.js" />
+    <None Include="wwwroot\semantic\dist\components\dimmer.min.js" />
+    <None Include="wwwroot\semantic\dist\components\dropdown.js" />
+    <None Include="wwwroot\semantic\dist\components\dropdown.min.js" />
+    <None Include="wwwroot\semantic\dist\components\embed.js" />
+    <None Include="wwwroot\semantic\dist\components\embed.min.js" />
+    <None Include="wwwroot\semantic\dist\components\form.js" />
+    <None Include="wwwroot\semantic\dist\components\form.min.js" />
+    <None Include="wwwroot\semantic\dist\components\modal.js" />
+    <None Include="wwwroot\semantic\dist\components\modal.min.js" />
+    <None Include="wwwroot\semantic\dist\components\nag.js" />
+    <None Include="wwwroot\semantic\dist\components\nag.min.js" />
+    <None Include="wwwroot\semantic\dist\components\popup.js" />
+    <None Include="wwwroot\semantic\dist\components\popup.min.js" />
+    <None Include="wwwroot\semantic\dist\components\progress.js" />
+    <None Include="wwwroot\semantic\dist\components\progress.min.js" />
+    <None Include="wwwroot\semantic\dist\components\rating.js" />
+    <None Include="wwwroot\semantic\dist\components\rating.min.js" />
+    <None Include="wwwroot\semantic\dist\components\search.js" />
+    <None Include="wwwroot\semantic\dist\components\search.min.js" />
+    <None Include="wwwroot\semantic\dist\components\shape.js" />
+    <None Include="wwwroot\semantic\dist\components\shape.min.js" />
+    <None Include="wwwroot\semantic\dist\components\sidebar.js" />
+    <None Include="wwwroot\semantic\dist\components\sidebar.min.js" />
+    <None Include="wwwroot\semantic\dist\components\site.js" />
+    <None Include="wwwroot\semantic\dist\components\site.min.js" />
+    <None Include="wwwroot\semantic\dist\components\sticky.js" />
+    <None Include="wwwroot\semantic\dist\components\sticky.min.js" />
+    <None Include="wwwroot\semantic\dist\components\tab.js" />
+    <None Include="wwwroot\semantic\dist\components\tab.min.js" />
+    <None Include="wwwroot\semantic\dist\components\transition.js" />
+    <None Include="wwwroot\semantic\dist\components\transition.min.js" />
+    <None Include="wwwroot\semantic\dist\components\video.js" />
+    <None Include="wwwroot\semantic\dist\components\video.min.js" />
+    <None Include="wwwroot\semantic\dist\components\visibility.js" />
+    <None Include="wwwroot\semantic\dist\components\visibility.min.js" />
+    <None Include="wwwroot\semantic\dist\semantic.js" />
+    <None Include="wwwroot\semantic\dist\semantic.min.js" />
+    <None Include="wwwroot\semantic\dist\themes\basic\assets\fonts\icons.svg" />
+    <None Include="wwwroot\semantic\dist\themes\default\assets\fonts\brand-icons.svg" />
+    <None Include="wwwroot\semantic\dist\themes\default\assets\fonts\brand-icons.woff2" />
+    <None Include="wwwroot\semantic\dist\themes\default\assets\fonts\icons.svg" />
+    <None Include="wwwroot\semantic\dist\themes\default\assets\fonts\icons.woff2" />
+    <None Include="wwwroot\semantic\dist\themes\default\assets\fonts\outline-icons.svg" />
+    <None Include="wwwroot\semantic\dist\themes\default\assets\fonts\outline-icons.woff2" />
+    <None Include="wwwroot\semantic\dist\themes\github\assets\fonts\octicons.svg" />
+    <None Include="wwwroot\semantic\dist\themes\material\assets\fonts\icons.svg" />
+    <None Include="wwwroot\semantic\dist\themes\material\assets\fonts\icons.woff2" />
   </ItemGroup>
 
 </Project>
