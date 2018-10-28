@@ -4,5 +4,103 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Register</h2>
+<style type="text/css">
+
+    body {
+        background-color: #DADADA;
+    }
+
+        body > .grid {
+            height: 100%;
+        }
+
+    .image {
+        margin-top: -100px;
+    }
+
+    .column {
+        max-width: 450px;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $('.ui.form').form({
+            fields: {
+                username: {
+                    identifier: 'username',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: '请输入你的账号'
+                        }
+                    ]
+                },
+                password: {
+                    identifier: 'password',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: '请输入你的密码'
+                        },
+                        {
+                            type: 'length[6]',
+                            prompt: '密码长度不小于6位'
+                        }
+                    ]
+                },
+                password2: {
+                    identifier: 'password',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: '请再次输入你的密码'
+                        },
+                        {
+                            type: 'length[6]',
+                            prompt: '密码长度不小于6位'
+                        }
+                    ]
+                }
+            }
+        })
+            ;
+    });
+</script>
+<div class="ui middle aligned center aligned grid" style="height:100%;">
+    <div class="column">
+        <h2 class="ui teal image header">
+            <img src="/semantic/dist/logo.png" class="image">
+            <div class="content">
+                账号注册
+            </div>
+        </h2>
+        <form class="ui large form">
+            <div class="ui stacked segment">
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input type="text" name="username" placeholder="请输入账号">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <input type="password" name="password" placeholder="请输入密码">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <input type="password" name="password2" placeholder="请再次输入密码">
+                    </div>
+                </div>
+                <div class="ui fluid large teal submit button">注册</div>
+            </div>
+            <div class="ui error message"></div>
+        </form>
+        <div class="ui message">
+            返回登录？ <a asp-controller="account" asp-action="index">登录</a>
+        </div>
+    </div>
+</div>
 

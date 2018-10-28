@@ -56,7 +56,7 @@ namespace Finance
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Login}/{action=Login}/{id?}");
+                    template: "{controller=Account}/{action=Index}/{id?}");
             });
         }
     }

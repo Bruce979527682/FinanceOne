@@ -8,7 +8,7 @@ namespace Finance.Controllers
 {
     public class AccountController : Controller
     {
-        public IActionResult Login()
+        public IActionResult Index()
         {
             return View();
         }
@@ -16,6 +16,18 @@ namespace Finance.Controllers
         public IActionResult Register()
         {
             return View();
+        }
+
+        [HttpPost]
+        public JsonResult Login()
+        {
+            var username = Request.Form["username"].ToString().Trim();
+            var password = Request.Form["password"];
+            if (!string.IsNullOrEmpty(username))
+            {
+                return Json(new { code = 1, src = "/home/index" });
+            }            
+            return Json(new { code = 0, msg = "账号或密码错误" });
         }
     }
 }
