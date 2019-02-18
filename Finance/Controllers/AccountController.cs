@@ -1,13 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using Finance.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Finance.Controllers
 {
-    public class AccountController : Controller
+    public class AccountController : BaseController
     {
+        public FinanceContext _financeContext;
+        public AccountController(FinanceContext context)
+        {
+            _financeContext = context;
+        }
         public IActionResult Index()
         {
             return View();
@@ -21,11 +25,23 @@ namespace Finance.Controllers
         [HttpPost]
         public JsonResult Login()
         {
-            var username = Request.Form["username"].ToString().Trim();
-            var password = Request.Form["password"];
+            //var username = GetRequestString("username","");
+            //var username = GetRequestString("username","");
+            var username = "Bruce";
+            var password = "123456";
             if (!string.IsNullOrEmpty(username))
             {
-                return Json(new { code = 1, src = "/home/index" });
+                var user = _financeContext.Users.SingleOrDefault(x=>x.UserName == username);
+                if(user != null)
+                {
+                    if(user.Password == password)
+                    {
+                        user.LoginTime = DateTime.Now;
+                        _financeContext.SaveChanges();
+                        SetUserInfoSession(user);
+                        return Json(new { code = 1, src = "/home/index" });
+                    }
+                }                
             }            
             return Json(new { code = 0, msg = "账号或密码错误" });
         }
